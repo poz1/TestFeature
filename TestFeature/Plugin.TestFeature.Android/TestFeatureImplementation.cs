@@ -9,5 +9,9 @@ namespace Plugin.TestFeature
   /// </summary>
   public class TestFeatureImplementation : ITestFeature
   {
+        public TestFeatureImplementation()
+        {
+            System.Diagnostics.Debug.WriteLine("Hey! I'm the Android PCL");
+        }
   }
 }
