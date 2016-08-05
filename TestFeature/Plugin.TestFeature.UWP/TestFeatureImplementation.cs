@@ -9,9 +9,9 @@ namespace Plugin.TestFeature
   /// </summary>
   public class TestFeatureImplementation : ITestFeature
   {
-        public TestFeatureImplementation()
+        public string GetHello()
         {
-            System.Diagnostics.Debug.WriteLine("Hey! I'm the UWP PCL");
+            return "Hey! I'm the UWP PCL";
         }
     }
 }

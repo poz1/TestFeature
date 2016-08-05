@@ -7,6 +7,6 @@ namespace Plugin.TestFeature.Abstractions
   /// </summary>
   public interface ITestFeature
   {
-
+        string GetHello();
   }
 }

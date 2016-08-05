@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-using Xamarin.Forms;
+﻿using Xamarin.Forms;
 
 namespace TestApp
 {
@@ -11,6 +6,8 @@ namespace TestApp
     {
         public App()
         {
+            var feature = Plugin.TestFeature.CrossTestFeature.Current;
+
             // The root page of your application
             MainPage = new ContentPage
             {
@@ -20,13 +17,11 @@ namespace TestApp
                     Children = {
                         new Label {
                             XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
+                            Text = feature.GetHello()
                         }
                     }
                 }
             };
-
-            var feature = Plugin.TestFeature.CrossTestFeature.Current;
         }
 
         protected override void OnStart()
